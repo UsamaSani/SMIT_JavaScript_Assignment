@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(246, 246, 238);
+    padding: 0.7rem;
+
+}
+.t-white{
+    display: none;
+}
+#time{
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calculator{
+    display: flex;
+    flex-direction: column;
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+.img img{
+    width: 1rem;
+    margin-left: 0.5rem;
+}
+.reset{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(246, 246, 238);
+    padding: 0.5rem;
+}
+.reset img{
+    width: 1rem;
+    height: 1rem;
+    justify-content: center;
+}
+.res{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+.reset-white{
+    display: none;
+}
+.operation{
+    background-color: rgb(246, 246, 238);
+    height: 10rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 1rem;
+
+}
+.operation #opt{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: gray;
+}
+.result{
+    background-color: rgb(246, 246, 238);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#result{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.equal{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.btn{
+    margin-top: 1rem;
+    background-color: rgb(246, 246, 238);
+    padding: 0.4rem;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.moon{
+    display: block !important;
+}
+
+.sun{
+    display: none;
+}
+.btns{
+display: flex;    
+justify-content: space-around;
+align-items: center;
+}
+.btns li{
+    padding: 0.5rem;
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+.btns li:hover{
+    cursor: pointer;
+    box-shadow: 0.2rem 0.2rem 0.5rem !important;
+}
+.btn-color{
+    color: #1cc56a;
+}
+.bte{
+    background-color: #1cc56a !important;
+    color: white;
+}
+.btns img{
+    width: 1rem;
+}
+.hrline{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.line{
+    border-bottom: 0.1rem solid silver;
+    width: 20%;
+}
+.clear-white{
+    display: none;
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1cc56a;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .calculator {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .top,
+body.dark-mode .reset,
+body.dark-mode .operation,
+body.dark-mode .result,
+body.dark-mode .btn {
+    background-color: black;
+    color: #e0e0e0;
+}
+body.dark-mode #result{
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+body.dark-mode .t-white{
+    display: block !important;
+}
+body.dark-mode .t-dark{
+    display: none !important;
+}
+body.dark-mode .reset-dark{
+    display: none !important;
+}
+body.dark-mode .reset-white{
+    display: block !important;
+}
+body.dark-mode .sun{
+    display: block !important;
+}
+body.dark-mode .moon{
+    display: none !important;
+}
+body.dark-mode .clear-white{
+    display: block !important;
+}
+body.dark-mode .clear-dark{
+    display: none !important;
+}
+body.dark-mode .btns li {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode .btns li:hover {
+    box-shadow: 0.2rem 0.2rem 0.5rem  !important;
+}
+
+body.dark-mode .bte {
+    background-color: #555 !important;
+    color: white;
+}
+
+body.dark-mode .line {
+    border-bottom: 0.1rem solid white;
+}
