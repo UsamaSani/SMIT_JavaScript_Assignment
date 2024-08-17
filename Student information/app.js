@@ -13,28 +13,28 @@ let StudentInfo = [
         StudentID : "WMA-173160",
         Department : "Computer Science",
         Program : "BS Cyber Security",
-        Courses : ["DSA","DLD","Differential Equation","Information Security","AI"] 
+        Courses : ["Data Structure","Digital Logic Design","Differential Equation","Information Security","Artificial Intelligence"] 
     },
     {
         Name : "Rayyan Sheikh",
         StudentID : "BCB-12S-49",
         Department : "Computer Science",
         Program : "BS Cyber Security",
-        Courses : ["DSA","DLD","Differential Equation","Information Security","AI"] 
+        Courses : ["Data Structure","Digital Logic Design","Differential Equation","Information Security","Artificial Intelligence"] 
     },
     {
         Name : "Ahmer Soomro",
         StudentID : "BCB-12S-49",
         Department : "Computer Science",
         Program : "BS Cyber Security",
-        Courses : ["DSA","DLD","Differential Equation","Information Security","AI"] 
+        Courses : ["Data Structure","Digital Logic Design","Differential Equation","Information Security","Artificial Intelligence"] 
     },
     {
         Name : "Inshaal Tehnoon",
         StudentID : "BCB-12S-49",
         Department : "Computer Science",
         Program : "BS Cyber Security",
-        Courses : ["DSA","DLD","Differential Equation","Information Security","AI"] 
+        Courses : ["Data Structure","Digital Logic Design","Differential Equation","Information Security","Artificial Intelligence"] 
     }
 ]
 
@@ -48,8 +48,15 @@ function studentInfoCards(name,dept,id,prog,courses){
     <p>Student Id : <span>${id}</span></p>
     <p>Department : <span>${dept}</span></p>
     <p>Program : <span>${prog}</span></p>
-    <p>Courses : <span class="courses">${courses}</p>
-`;
+    `;
+    let crcont = document.createElement("ul")
+    crcont.innerHTML = "<h2>Courses</h2>"
+    courses.forEach(course =>{
+        let li = document.createElement("li")
+        li.innerHTML = course
+        crcont.appendChild(li)
+    })
+    studentcont.appendChild(crcont)
 document.getElementById("studentInfoCont").appendChild(studentcont);
 }
 
