@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.AgendaPro.com</title>
+    <link rel="icon" href="./Images/AgendaLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <header>
+        <nav><div><img src="./Images/AgendaLogo.png" alt="AgendaPro" class="logo"><p>AgendaPro.</p></div><button class="toggleMenu" id="toggleMenu"><img src="./Images/Menu.png" alt=""></button></nav>
+        <div class="menu" id="menu">
+            <div>
+            <div class="search"><input type="text" placeholder="Search" id="search"><button class="search-btn" id="searchBtn"><img src="./Images/search.png" alt="">Search</button></div>
+            <div class="highlightedNotes same-opt"><p>HighLights</p><button class="menu_same_btn" id="HighLights-btn"><img src="./Images/DownWard.png" alt=""></button></div>
+            <div class="hlInfo sameContFor-hl-r-info" id="hlInfo"><ol id="hl"><p id="hlNo">No HighLights</p></ol></div>
+            <div class="reminders same-opt"><p>Reminders</p><button class="menu_same_btn" id="reminderBtn"><img src="./Images/DownWard.png" alt=""></button></div>
+            <div class="reminderInfo sameContFor-hl-r-info" id="reminderInfo"><ol id="ri"><p id="rino">No Work Today <br> Enjoy the day!</p></ol></div>
+            <div class="same-opt" id="Todo-List"><p>Todo-List</p><img src="./Images/todoicon.png" alt="" class="todoimg"></div>
+            </div>
+            <div><button class="addBtn" id="addBtn"><img src="./Images/addbtn.png" alt=""><p>Creates Notes</p></button></div>
+        </div>
+    </header>
+    <section>
+        <h1><img src="./Images/Notes.png" alt=""> Notes</h1>
+        <div class="featuresContainer">
+            <h3>TODO-LIST</h3>
+            <div class="features">
+                <button class="hlBtn same-features-btn" id="highLightbtn"><img src="./Images/highlights1.png" alt="" class="same-features-img"><p>HighLight</p></button>
+                <button class="rmBtn same-features-btn" id="reminderbtn1"><img src="./Images/reminder1.png" alt="" class="same-features-img"><p>Reminder</p></button>
+                <button class="deleteBtn same-features-btn" id="deletebtn"><img src="./Images/deleteOrange.png" alt="" class="same-features-img"><p>Delete</p></button>
+            </div>
+        </div>
+        <hr>
+        <div class="mainContainer" id="mainContainer">
+            <div class="noTaskAvail" id="noTaskAvail"><p>No Task Available</p></div>
+        </div>
+        <div class="highlightmainContainer" id="highlightmainContainer">
+            <div class="noTaskhighlight" id="noTaskhighlight"><p>No Task HighLight</p></div>
+        </div>
+        <div class="beachme">
+        <div class="createTask" id="createTask">
+            <input type="text" placeholder="Subject:" id="subject">
+            <textarea name="description" id="description" class="description" placeholder="Add Description"></textarea>
+            <div class="ctBtn">
+                <button id="taskAddBtn">Add</button>
+                <button id="confirm">Confirm</button>
+                <button id="taskCancelBtn">Cancel</button>
+            </div>
+        </div>
+        </div>
+        <button class="fixed" id="fixedBtn"><img src="./Images/addbtn.png" alt=""></button>
+    </section>
+
+<footer>
+    <h1>CopyRights &copy; Reserved by Usama Sani</h1>
+</footer>
+
+
+
+
+
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

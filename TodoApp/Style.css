@@ -1,0 +1,333 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Archivo Black", sans-serif;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Archivo Black';
+    src: url('./Archivo_Black/ArchivoBlack-Regular.ttf') format('truetype');
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4169e1;
+    z-index: 1;
+}
+nav div{
+    display: flex;
+    align-items: center;
+}
+nav div p{
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+nav button{
+    border: none;
+}
+.logo{
+    width: 4rem;
+    margin-right: 1rem;
+}
+.toggleMenu{
+    width: 1.2rem;
+    background: none;
+}
+.toggleMenu img{
+    width: 1.2rem;
+}
+.menu{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eda595;
+    padding: 1rem;
+    /* height: 100vh; */
+}
+
+
+
+.search{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+.search input{
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.search-btn{
+    cursor: pointer;
+    background-color: #db4a2b;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 1rem;
+}
+.search button img{
+    width: 1.2rem;
+}
+.same-opt{
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0px 1px 10px;
+    margin-top: 1rem;
+    background-color: #4169e1;
+}
+.menu_same_btn img{
+    width: 1rem;
+}
+.menu_same_btn{
+    background: none;
+    border: none;
+    width: 1rem;
+    cursor: pointer;
+}
+.sameContFor-hl-r-info{
+    background-color:white;
+    color: grey;
+    padding: 1rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0rem 1rem;
+    margin-bottom: 1rem;
+    /* box-shadow: 0px 1px 10px; */
+}
+.todoimg{
+    width: 1.2rem;
+}
+.addBtn{
+    cursor: pointer;
+    margin-top: 3rem;
+    background: none;
+    border: none;
+}
+section{
+    padding: 1rem;
+}
+section h1{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+section h1 img{
+    width: 2.5rem;
+}
+.same-features-img{
+    width: 1.5rem;
+    margin-right:0.1rem;
+}
+.features{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+section{
+    height: 100vh;
+}
+.featuresContainer{
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+.same-features-btn{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 1px 10px;
+}
+.same-features-btn:hover{
+    cursor: pointer;
+}
+.mainContainer{
+    margin-top: 1rem;
+}
+.task img{
+    width: 1rem;
+}
+.task button{
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+}
+.task{
+    display: flex;
+    flex-direction: column;
+}
+.spacebetween{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+.adjustTask input{
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+}
+.adjustTask{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: #4169e1;
+    border:none;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 1px 10px;
+}
+.displayDescription{
+    padding: 1rem;
+    background-color: #eda595;
+}
+.fixed{
+    cursor: pointer;
+    background: none;
+    border: none;
+    float: right;
+    margin: 2rem;
+}
+.fixed:hover{
+    cursor: pointer;
+}
+.noTaskAvail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+}
+.createTask{
+    display: none;
+    flex-direction: column;
+    /* height: 50vh; */
+    background-color: #eda595;
+    padding: 1rem;
+    height: 20rem;
+    margin-top: 1rem;
+    box-shadow: 0px 1px 10px;
+}
+.createTask input{
+    padding: 1rem;
+    background: none;
+    border-radius: 1rem;
+    border: none;
+    border-bottom: 1px solid #db4a2b ;
+    /* color: #db4a2b; */
+    font-size: 1.2rem;
+}
+.description{
+    margin-top: 1rem;
+    height: 10rem;
+    /* color: #db4a2b; */
+    padding: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #db4a2b;
+    border-radius: 1rem;
+}
+.ctBtn button{
+    background-color: #eda595;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 1px 10px;
+}
+.ctBtn{
+    margin-top: 2rem;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.displayDescription p{
+    display: flex;
+    flex-wrap: wrap;
+}
+.displayDescription{
+    display: none;
+    flex-wrap: wrap;
+    border-radius: 0rem 1rem;
+}
+#confirm{
+    display: none ;
+}
+.highlightmainContainer{
+    margin-top: 1rem;
+}
+.noTaskhighlight{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+}
+.clickLi{
+    cursor: pointer;
+}
+.clickLi:hover{
+    text-decoration: underline;
+}
+@media screen and (min-width: 1050px) {
+    .toggleMenu{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    .features{
+        justify-content: flex-end;
+    }
+    .same-features-btn{
+        margin-left: 1rem;
+    }
+    .adjustTask {
+        border-radius: 1rem;
+    }
+    .task {
+        margin-top: 2rem;
+        width: 80%;
+    }
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .createTask{
+        width: 80%;
+        border-radius: 1rem;
+    }
+    .beachme{
+        display: flex;
+        justify-content: center;
+    }
+    footer h1{
+        font-size: 1.2rem !important;
+      }
+  }
+  
+  footer{
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #4169e1;
+    box-shadow: 1px 0px 10px;
+  }
+  footer h1{
+    font-size: 0.9rem;
+  }
