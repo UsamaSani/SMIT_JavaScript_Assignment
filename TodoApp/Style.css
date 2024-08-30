@@ -10,7 +10,7 @@
 }
 nav{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     flex-basis: 100%;
     padding: 1rem;
     align-items: center;
@@ -20,6 +20,7 @@ nav{
 }
 nav div{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 nav div p{
@@ -67,6 +68,7 @@ nav button{
     cursor: pointer;
     background-color: #db4a2b;
     padding: 1rem;
+    margin: 0.4rem;
     display: flex;
     align-items: center;
     border: none;
@@ -135,17 +137,17 @@ section h1 img{
 .features{
     margin-top: 1rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
-section{
-    height: 100vh;
-}
+
 .featuresContainer{
     margin-top: 5rem;
     margin-bottom: 1rem;
 }
 .same-features-btn{
     padding: 0.7rem;
+    margin: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -199,7 +201,7 @@ section{
     cursor: pointer;
     background: none;
     border: none;
-    float: right;
+    /* float: right; */
     margin: 2rem;
 }
 .fixed:hover{
@@ -217,7 +219,7 @@ section{
     /* height: 50vh; */
     background-color: #eda595;
     padding: 1rem;
-    height: 20rem;
+    /* height: 20rem; */
     margin-top: 1rem;
     box-shadow: 0px 1px 10px;
 }

@@ -93,7 +93,7 @@ function taskList(sb,ds,sr){
     task.id = "task-" + sr
     task.innerHTML = `
     <div class="adjustTask">
-    <p class= "serialNumber">${sr} |</p>
+    <p class= "serialNumber">${sr}| </p>
     <input type="checkbox">
     <div class=" spacebetween">
     <p class ="clickSub">${sb}</p>
@@ -179,39 +179,110 @@ function cancel(){
 }
 
 
+// let deletebtn = document.getElementById("deletebtn");
+// deletebtn.addEventListener('click', remove);
+
+// function remove() {
+//     let checkboxTasks = document.querySelectorAll('.task input[type="checkbox"]');
+//     let newListInfo = [];
+//     checkboxTasks.forEach(function(checkbox, i) {
+//         if (!checkbox.checked) {
+//             newListInfo.push(listInfo[i]);
+//             sahi = true
+//         } else {
+//             let checked = listInfo[i].Subject
+//             let hlremove = highLightsInfoList[i]
+//             let rdRemove = reminderInfoList[i]
+//             let task = checkbox.closest('.task');
+//             let li = checkbox.closest('.clickLi')
+//             task.remove()
+//             if(hlremove==checked||rdRemove==checked){
+//                 li.remove()
+//             }   
+//         }
+//     });
+// if(sahi==false){
+//     listInfo.splice(0,listInfo.length)
+//     srn=0
+// }
+//     listInfo = newListInfo;
+//     mainContainer.innerHTML = "";
+//     for (let i = 0; i < listInfo.length; i++) {
+//         taskList(listInfo[i].Subject, listInfo[i].Description, listInfo[i].Sr=i+1);
+//         srn = i+1
+//     }
+//     createTask.style.display = "none";
+//     // if (listInfo.length===0) {
+//     //     noTaskAvail.style.display = "flex";
+//     // } else {
+//     //     noTaskAvail.style.display = "none";
+//     // }
+//     console.log(listInfo)
+// }
+
+//*********************************** */ Remove logic is written by the help of ChatGpt
 let deletebtn = document.getElementById("deletebtn");
 deletebtn.addEventListener('click', remove);
 
 function remove() {
     let checkboxTasks = document.querySelectorAll('.task input[type="checkbox"]');
     let newListInfo = [];
+    let updatedHighLightsInfoList = [];
+    let updatedReminderInfoList = [];
+
     checkboxTasks.forEach(function(checkbox, i) {
         if (!checkbox.checked) {
             newListInfo.push(listInfo[i]);
-            sahi = true
+            if (highLightsInfoList.includes(listInfo[i].Subject)) {
+                updatedHighLightsInfoList.push(listInfo[i].Subject);
+            }
+            if (reminderInfoList.includes(listInfo[i].Subject)) {
+                updatedReminderInfoList.push(listInfo[i].Subject);
+            }
         } else {
             let task = checkbox.closest('.task');
             task.remove();
+
+            let hlIndex = highLightsInfoList.indexOf(listInfo[i].Subject);
+            if (hlIndex > -1) {
+                highLightsInfoList.splice(hlIndex, 1);
+            }
+
+            let rdIndex = reminderInfoList.indexOf(listInfo[i].Subject);
+            if (rdIndex > -1) {
+                reminderInfoList.splice(rdIndex, 1);
+            }
+            let hlLi = document.querySelector(`#hl li:nth-child(${hlIndex + 1})`);
+            if (hlLi) hlLi.remove();
+
+            let rdLi = document.querySelector(`#ri li:nth-child(${rdIndex + 1})`);
+            if (rdLi) rdLi.remove();
         }
     });
-if(sahi==false){
-    listInfo.splice(0,listInfo.length)
-    srn=0
-}
+
+
+
+
     listInfo = newListInfo;
+    highLightsInfoList = updatedHighLightsInfoList;
+    reminderInfoList = updatedReminderInfoList;
+
     mainContainer.innerHTML = "";
     for (let i = 0; i < listInfo.length; i++) {
-        taskList(listInfo[i].Subject, listInfo[i].Description, listInfo[i].Sr=i+1);
-        srn = i+1
+        taskList(listInfo[i].Subject, listInfo[i].Description, listInfo[i].Sr = i + 1);
+        srn = i + 1;
     }
+
     createTask.style.display = "none";
-    // if (listInfo.length===0) {
-    //     noTaskAvail.style.display = "flex";
-    // } else {
-    //     noTaskAvail.style.display = "none";
-    // }
-    console.log(listInfo)
+    if (listInfo.length === 0) {
+        noTaskAvail.style.display = "flex";
+    } else {
+        noTaskAvail.style.display = "none";
+    }
+
+    console.log(listInfo);
 }
+
 let hlBtn = document.getElementById("highLightbtn");
 hlBtn.addEventListener('click', highLightsTask);
 
