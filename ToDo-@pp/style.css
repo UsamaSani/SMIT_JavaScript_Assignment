@@ -277,3 +277,35 @@ footer{
 #reminderList li:hover{
     text-decoration: underline;
 }
+@media screen and (min-width: 469px) and (max-width: 1000px) {
+.navBtn{
+    width: 80%;
+}
+.form textarea{
+    height: 10rem;
+}
+}
+@media screen and (min-width: 1000px){
+    .form{
+        width: 65%;
+    }
+    .search input{
+        width: 26rem;
+    }
+    .search button{
+        width: 7rem;
+        padding: 0.7rem;
+    }
+    .task{
+        width: 67%;
+    }
+    #highlightedList, #reminderList{
+        width: 65%;
+    }
+    .togleBtn{
+        width: 65%;
+    }
+    .form textarea{
+        height: 10rem;
+    }
+}

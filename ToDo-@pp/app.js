@@ -229,6 +229,7 @@ function searchTask(){
     }
     if(found == false){
         noTask.innerText = "No Task found"
+        backBtn.style.display =  "block"
         console.log(noTask)
     }else{
         taskDiv.innerHTML = ""
