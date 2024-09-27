@@ -386,9 +386,9 @@ function reminderTask(update){
                     throw 'break';
                 }
                 if(taskInList == false){
-                    reminderListarr.push(tasksSubject.innerText)
-                    console.log(reminderListarr)
-                    taskCanAdd = true
+                        reminderListarr.push(tasksSubject.innerText)
+                        console.log(reminderListarr)
+                        taskCanAdd = true
                 }
                 
             }
@@ -399,8 +399,8 @@ function reminderTask(update){
     if(taskInList == false){
         reminderList.innerHTML = ""
     if(taskCanAdd == true){
-         choice         = prompt("Select the time in which you wanted to be reminded h/m/s write any of these alphabet")
-         hour_sec_mint  = prompt("Enter Time")
+        choice         = prompt("Select the time in which you wanted to be reminded h/m/s write any of these alphabet")
+        hour_sec_mint  = prompt("Enter Time")
     }
          switch (choice.trim().toLocaleLowerCase()) {
              case "h":
@@ -441,7 +441,6 @@ function reminderTask(update){
             check.checked = false
         }
     })
-
     setTimeout(()=>{
         let count = 0
         for(i = 0 ; i < reminderListarr.length ; i++){
@@ -452,6 +451,7 @@ function reminderTask(update){
         }
     },time)
  }
+
  console.log(`ye reminder list he  ${reminderListarr}`)
 }
 

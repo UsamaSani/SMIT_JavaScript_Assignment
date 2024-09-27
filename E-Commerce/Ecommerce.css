@@ -1,0 +1,290 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* transition: ease 0.3s; */
+}
+
+button{
+  cursor: pointer;
+}
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+.th:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  line-height: 48px;
+  left: 30%;
+  top: 50%;
+  animation: abomination1 7.5s linear 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes abomination1 {
+  0% {
+    content: "O|";
+  }
+  5% {
+    content: "One|";
+  }
+  10% {
+    content: "One D|";
+  }
+  15% {
+    content: "One De|";
+  }
+  20% {
+    content: "One Des|";
+  }
+  25% {
+    content: "One Dest|";
+  }
+  30% {
+    content: "One Desti|";
+  }
+  35% {
+    content: "One Destin|";
+  }
+  40% {
+    content: "One Destina|";
+  }
+  45% {
+    content: "One Destinat|";
+  }
+  50% {
+    content: "One Destinati|";
+  }
+  55% {
+    content: "One Destinatio|";
+  }
+  60% {
+    content: "One Destination|";
+  }
+  65% {
+    content: "One Destination F|";
+  }
+  70% {
+    content: "One Destination For|";
+  }
+  75% {
+    content: "One Destination For A|";
+  }
+  80% {
+    content: "One Destination For All|";
+  }
+  85% {
+    content: "One Destination For All K|";
+  }
+  90% {
+    content: "One Destination For All Kin|";
+  }
+  95% {
+    content: "One Destination For All Kind|";
+  }
+  100% {
+    content: "One Destination For All Kind Of Shopping";
+  }
+}
+
+body{
+    border: 1rem solid #231f20 ;
+    background-color: #fce373;
+}
+header{
+    color: #231f20;
+    font-weight: bolder;
+
+}
+.logo{
+    background-color: #231f20;
+    color: #fce373;
+    padding: 1rem;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 1rem 1rem 1rem;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;     
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+nav ul li{
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+nav ul li:nth-child(3) {
+    order: -1;
+    font-size: 1.5rem;
+}
+nav button{
+    background-color: #231f20;
+    color: #fce373;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+header div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+}
+section{
+    /* background-color:#cca69a; */
+    padding: 1rem;
+}
+.search{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.search .s{
+    display: flex;
+    align-items:flex-end;
+    margin: 1rem;
+}
+.search .s span{
+  cursor: pointer;
+}
+.search img{
+    width: 1.2rem;
+    margin-left: 0.5rem;
+}
+.search input{
+    padding: 0.7rem;
+    border: none;
+    border-radius: 1rem;
+    background: none;
+    border-bottom: 1px solid;
+}
+.filter{
+  margin-bottom: 2rem;
+}
+.card{
+    /* background-color: #231f20; */
+    /* box-shadow: 1px 1px 10px black; */
+    width: 100%;
+    /* margin-bottom: 1rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.price{
+    display: flex;
+    flex-direction: column;
+}
+.pimg{
+  display: flex;
+  width: 50%;
+}
+.pimg img{
+    width: 100%;
+}
+.pabout{
+    padding:0.7rem ;
+}
+.btn button{
+    background: none;
+    padding: 0.7rem;
+    background-color: #231f20;
+    color: #fce373;
+    border: none;
+    margin: 1rem;
+    width: 5rem;
+}
+.btn{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.price{
+  margin-top: 1rem;
+}
+.ph{
+  margin-bottom: 1rem;
+}
+.filter{
+  display: flex;
+  flex-direction: column;
+  background-color: #231f20;
+  color: #fce373;
+  padding: 1rem;
+}
+@media (min-width: 768px){
+header nav{
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+}
+header nav button{
+    margin-left: 1rem;
+}
+header nav ul{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+header nav ul li{
+    font-size: 1.3rem;
+}
+#search{
+  color: white;
+}
+.search{
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 12rem;  */
+}
+ /* .filter{
+  flex-direction: row;
+ } */
+.navBtn{
+    transition: ease 1s;
+    padding:0.7rem;
+    width: 7rem;
+    text-align: center;
+}
+.navBtn:hover{
+    cursor: pointer;
+    /* background: linear-gradient(to right, #231f20, #fce373); */
+    background-color: #231f20;
+    color: #fce373;
+}
+nav ul li:nth-child(3) {
+    order: 0;
+    font-size: 1.7rem;
+}
+header div{
+    padding: 4rem;
+}
+header div h1{
+    font-size: 3rem;
+}
+.card{
+  flex-direction: row;
+}
+.odd{
+  order: 1 !important;
+}
+/* .pimg{
+  order: 1;
+} */
+.pimg img{
+  width: 100%;
+  height: 30rem;
+}
+.pabout{
+  padding: 1rem;
+}
+}
