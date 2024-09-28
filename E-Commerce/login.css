@@ -1,8 +1,145 @@
 body{
-    color: #fce373;
     color: #231f20;
+    /* color: #fce373;
     color: #cca69a;
     color: #3c4e4a;
     color: #2eb295;
-    color: #6a7f8e;
+    color: #6a7f8e; */
+}
+#loginbtn{
+    display: none;
+}
+.loginbox{
+    display: flex;
+    flex-direction: column;
+}
+.llogo{
+    display: none;
+}
+
+.loginCredentials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 1px 1px 10px black;
+    justify-content: center;
+}
+.loginCredentials h2{
+    font-size: 2rem;
+}
+.loginFeild{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginFeild input{
+    padding: 1rem;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #231f20;
+    margin: 1rem;
+}
+.loginFeild button{
+    background-color: #231f20;
+    color: #fce373;
+    padding: 1rem;
+    border: none;
+
+}
+.reg-forg{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    width: 80%;
+}
+.reg-forg a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#loginWarning{
+    color: red;
+}
+/* Footer Styling */
+footer {
+    background-color: #231f20;
+    color: #fce373;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+footer h2 {
+    margin: 10px 0;
+}
+
+.tagline {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+section h3 {
+    margin-bottom: 10px;
+}
+
+section p {
+    margin: 5px 0;
+}
+
+.contact a {
+    color: #fce373;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p:last-of-type {
+    margin-top: 30px;
+    border-top: 1px solid #fce373;
+    padding-top: 10px;
+}
+footer a {
+    color: inherit; 
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+
+@media (min-width: 768px){
+    .llogo{
+        display: flex;
+        background-color: #231f20;
+        color: #fce373;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .loginbox{
+        margin: 1rem;
+        flex-direction: row;
+    }
+    .loginCredentials{
+        width: 50%;
+    }
+    .reg-forg{
+        width: 50%;
+        margin: 2rem;
+    }
 }

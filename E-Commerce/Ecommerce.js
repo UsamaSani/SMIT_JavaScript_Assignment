@@ -1,6 +1,57 @@
 let allProductsContainer = document.getElementById("allProducts")
 let searchInput = document.getElementById("search")
 let searchbtn = document.getElementById("searchbtn")
+let loginbtn = document.getElementById("loginbtn")
+let signOutbtn = document.getElementById("signOutbtn")
+let homebtn = document.getElementById("home")
+let cartbtn = document.getElementById("cart")
+let contactbtn = document.getElementById("contact")
+let aboutbtn = document.getElementById("about")
+let contactsection = document.getElementById("contact-section")
+let aboutsection = document.getElementById("about-section")
+let arrcart = []
+let userCartItem = []
+homebtn.addEventListener('click',()=>{
+    window.location.href = './index.html';
+})
+cartbtn.addEventListener('click',()=>{
+    window.location.href = './cart.html';
+})
+contactbtn.addEventListener('click',()=>{
+    contactsection.scrollIntoView({
+        behavior: 'smooth'
+    });
+})
+aboutbtn.addEventListener('click',()=>{
+    aboutsection.scrollIntoView({
+        behavior: 'smooth'
+    });
+})
+loginbtn.addEventListener('click',()=>{
+    window.location.href = './login.html';
+})
+
+let currentUser = ()=>{
+    let user = JSON.parse(localStorage.getItem("user"))
+    if(user){
+        signOutbtn.innerHTML= `
+        ${user.username}
+        <img src="${user.image}" alt="">
+        `
+        signOutbtn.style.display = "flex"
+        loginbtn.style.display = "none"
+    }
+}
+currentUser()
+signOutbtn.addEventListener('click',()=>{
+    let user = JSON.parse(localStorage.getItem("user"))
+    if(user){
+        loginbtn.style.display = "flex"
+        localStorage.removeItem("user");
+        window.location.reload();
+    }
+
+})
 
 let displayProducts = (product)=>{
     let productCard = document.createElement("div")
@@ -21,10 +72,33 @@ let displayProducts = (product)=>{
                     <strong>Rating: <span>${product[i].rating}</span></strong>
                     <strong>Stock: <span>${product[i].stock}</span></strong>
                 </div>
-                <div class="btn"><button>Purchase</button><button>Cart</button></div>
+                <div class="btn"><button class="purchasebtn">Purchase</button><button class="cartbtn">Cart</button></div>
             </div>
     `
     allProductsContainer.append(productCard)
+    
+    let cartbutton = productCard.querySelector(".cartbtn")
+    cartbutton.addEventListener('click',(event)=>{
+        let user = JSON.parse(localStorage.getItem("user"))
+        if(user){
+            let card = event.target.closest(".card")
+            let titleValue = card.querySelector(".ph").innerText
+        let descriptionValue = card.querySelector(".pp").innerText
+        for(i =0;i<arrcart.length ;i++){
+            // console.log(arrcart[i].title)
+            if(
+            titleValue.toLowerCase().trim() == arrcart[i].title.toLowerCase().trim() &&
+            descriptionValue.toLowerCase().trim() == arrcart[i].description.toLowerCase().trim()
+        ){
+            localStorage.removeItem("userCart");
+            userCartItem.push(arrcart[i])
+            localStorage.setItem("userCart",JSON.stringify(userCartItem) );
+        }
+    }
+}else{
+    alert("Login To add items in card")
+}
+})
 }
 
 let getProduct = async () => {
@@ -50,6 +124,7 @@ let displayallProducts = ()=>{
             if(product){
                 for(i = 0 ; i < product.length ; i++){
                     displayProducts(product)
+                    arrcart.push(product[i])
                 }
             }
         })
@@ -96,6 +171,7 @@ let searchProduct = ()=>{
         let sp = sproductData.products
         for(i = 0; i<sp.length;i++){
             displayProducts(sp)
+            arrcart.push(sp[i])
         }
     })
 }
