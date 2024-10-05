@@ -1,0 +1,129 @@
+.userDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #231f20;
+    color: #fce373;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    /* border-radius: 1rem; */
+    max-width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for a cleaner look */
+}
+
+.Alphabat {
+    background-color: #fce373;
+    color: #231f20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 50%; /* Make it circular */
+    font-size: 2rem;
+    width: 100px;
+    height: 100px;
+}
+.userh1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    overflow-wrap: break-word; 
+}
+.userInfoh1{
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    overflow-wrap: break-word;
+}
+.userh1 span {
+    display: inline-block;
+    max-width: 100%; 
+    word-wrap: break-word; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
+
+
+.userSpan {
+    color: grey;
+    font-weight: bold;
+}
+
+.AlphabatDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.Name {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+#signOutBtn {
+    background-color: #fce373;
+    color: #231f20;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#signOutBtn:hover {
+    background-color: #e1c762;
+}
+
+.userh1Div {
+    padding: 1rem;
+    width: 100%;
+}
+
+.dashboardh {
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .userDiv {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 3rem;
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .userh1Div {
+        width: 100%;
+        margin-left: 1rem;
+        text-align: left;
+    }
+
+    .AlphabatDiv {
+        width: 150px;
+    }
+
+    .userh1 {
+        font-size: 1.2rem;
+    }
+    .userInfoh1{
+        font-size: 1.2rem;
+    }
+
+    .Name {
+        font-size: 2rem;
+    }
+
+    #signOutBtn {
+        padding: 1rem;
+    }
+}

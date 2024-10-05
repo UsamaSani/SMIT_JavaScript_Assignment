@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dashboard.css">
     <link rel="stylesheet" href="./Ecommerce.css">
-    <title>One Destination</title>
+    <title>DashBoard</title>
 </head>
 <body>
     <header>
@@ -19,25 +20,28 @@
         <button id="loginbtn">LOGIN</button>
         <button id="dashboardBtn">LOGIN <img src="./images/filter.png" alt=""></button>
     </nav>
-    <div class="wrapper">
-        <h1 class="th"></h1>
-    </div>
 </header>
-<div class="togleProducts">
-    <div class="filter">
-    <div class="search">
-        <div class="s">
-            <input type="text" id="search" placeholder="Search">
-            <span id="searchbtn"><img src="./images/search.png" alt=""></span>
+<h1 class="dashboardh">DashBoard</h1>
+<section class="userInfo">
+        <div class="userDiv">
+            <div class="AlphabatDiv">
+            <div class="Alphabat"><h1 id="firstCharacter"></h1></div>
+            <h1 class="Name" id="fullName"></h1>
+            </div>
+            <div class="userh1Div">
+            <h1 class="userh1"><span class="userSpan">User Name</span> <span id="userName"></span></h1>
+            <h1 class="userh1"><span class="userSpan">Email Address</span> <span id="userEmail"></span></h1>
+            </div>
+            <div class="userh1Div">
+                <h1 class="userInfoh1"><span class="userSpan">User ID </span>  <span id="userId"></span></h1>
+                <h1 class="userInfoh1"><span class="userSpan">First Name </span>  <span id="firstName"></span></h1>
+                <h1 class="userInfoh1"><span class="userSpan">Last Name </span>  <span id="lastName"></span></h1>
+                <h1 class="userInfoh1"><span class="userSpan">Gender </span>  <span id="userGender"></span></h1>
+            </div>
+            <button id="signOutBtn">SignOut</button>
         </div>
-        <div class="filters">
-            <p id="filterBtn">Filter <span><img src="./images/filter.png" alt=""></span></p>
-        </div>
-    </div>
-</div>
-<div class="category" id="category"></div>
-</div>
-<section id="allProducts"></section>
+
+    </section>
     <footer>
         <div class="footer-content">
             <h2>One Destination</h2>
@@ -62,9 +66,6 @@
             </p>
         </div>
     </footer>
-
-
-
-    <script src="./Ecommerce.js"></script>
+    <script src="./dashboard.js"></script>
 </body>
 </html>

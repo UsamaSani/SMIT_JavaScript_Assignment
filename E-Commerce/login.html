@@ -20,19 +20,43 @@
         <button id="loginbtn">LOGIN</button>
     </nav>
 </header>
-    <div class="loginbox">
+    <div class="loginbox" id="loginForm">
         <div class="llogo"><h1>One Destination</h1></div>
         <div class="loginCredentials">
             <h2>Login</h2>
             <div class="loginFeild">
                 <span id="loginWarning"></span>
                 <input type="text" id="username" placeholder="UserName">
-                <input type="text" id="password" placeholder="Password">
+                <input type="password" id="password" placeholder="Password">
                 <button id="loginUserBtn">Login</button>
             </div>
             <div class="reg-forg">
                 <a id="register">Register</a>
                 <a id="Forget">Forget</a>
+            </div>
+        </div>
+    </div>
+    <div class="loginbox" id="registerationForm">
+        <div class="llogo"><h1>One Destination</h1></div>
+        <div class="loginCredentials">
+            <h2>Registeration Form</h2>
+            <div class="loginFeild">
+                <span id="RegisterWarning"></span>
+                <div class="radjustField">
+                <input type="text" id="rFirstName" placeholder="First Name">
+                <input type="text" id="rLastName" placeholder="Last Name">
+                <input type="text" id="rUserName" placeholder="UserName">
+                <input type="text" id="rUserGender" placeholder="Gender">
+                <input type="text" id="rUserAge" placeholder="Age">
+                <input type="text" id="rUserEmail" placeholder="Email">
+                <input type="password" id="rPassword" placeholder="New Password">
+                <input type="password" id="rConfirmPassword" placeholder="Confirm Password">
+                </div>
+                <button id="registerUserBtn">Register</button>
+            </div>
+            <div class="reg-forg">
+                <a id="rlogin">Login</a>
+                <a id="rForget">Forget</a>
             </div>
         </div>
     </div>

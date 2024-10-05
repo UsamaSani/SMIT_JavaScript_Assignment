@@ -120,8 +120,30 @@ footer a {
 footer a:hover {
     color: #fff;
 }
-
-
+.radjustField{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#registerationForm{
+    display: none;
+}
+#RegisterWarning{
+    color: red;
+}
+#password{
+    background: local;
+    background-color: #fce373;
+}
+#rPassword{
+    background: local;
+    background-color: #fce373;
+}
+#rConfirmPassword{
+    background: local;
+    background-color: #fce373;
+}
 @media (min-width: 768px){
     .llogo{
         display: flex;
