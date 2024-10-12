@@ -11,6 +11,10 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     max-width: 90%;
     margin: 0 auto;
     background-color: #fff;
@@ -21,6 +25,7 @@ body {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -66,7 +71,10 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+}
 .post {
     background-color: #f9f9f9;
     padding: 15px;
