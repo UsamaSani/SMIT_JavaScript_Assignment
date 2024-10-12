@@ -40,7 +40,9 @@ function displayData(post) {
         postsParentDiv.prepend(postDiv)
         let editBtn = postDiv.querySelector(".edit-btn")
         let deleteBtn = postDiv.querySelector(".delete-btn")
-        editBtn.addEventListener('click',(e)=> editPost(post.id,e))
+        editBtn.addEventListener('click',(e)=>{
+             editPost(post.id,e)
+        } )
         deleteBtn.addEventListener('click',(e)=> deletePost(post.id,e))
 }
 
@@ -68,7 +70,7 @@ document.getElementById("createPostForm").addEventListener('submit', function (e
          avatar == "" ||
          body == ""
     ){
-        alert("please fill the input fields")
+        // alert("please fill the input fields")
     }else{
         fetch(apiURL, {
             method: 'POST',
@@ -94,74 +96,83 @@ document.getElementById("createPostForm").addEventListener('submit', function (e
 
 let deletePost = (id,e)=>{
     let deleteDiv = e.target.closest(".post")
-    fetch(`https://67097283af1a3998baa18931.mockapi.io/crudOperation/api/POST/POST/${id}`, {
-        method: 'DELETE',
-      })
-      .then(res => res.json())
-      .then(deletedData => console.log(deletedData))
-      .catch(error => console.log(error))
-
-      deleteDiv.remove()
-    // console.log(id,e,deleteDiv)
+    if(id == 1){
+        alert("you cannot Delete this Post")
+    }else{
+        fetch(`https://67097283af1a3998baa18931.mockapi.io/crudOperation/api/POST/POST/${id}`, {
+            method: 'DELETE',
+          })
+          .then(res => res.json())
+          .then(deletedData => console.log(deletedData))
+          .catch(error => console.log(error))
+          deleteDiv.remove()
+    }
 }
 
 let editPost = (id,e)=>{
-    createPostForm.style.display ="none"
-    editPostForm.style.display="block"
-    let editPost = e.target.closest(".post")
-    let postAvatar = editPost.querySelector(".postAvatar")
-    let postName = editPost.querySelector(".postName")
-    let postTitle = editPost.querySelector(".postTitle")
-    let postBody = editPost.querySelector(".postBody")
-    let postCreateAt = editPost.querySelector(".postCreateAt")
-
-    document.getElementById('editname').value = `${postName.innerText}`
-    document.getElementById('edittitle').value = `${postTitle.innerText}`
-    document.getElementById('editavatar').value = `${postAvatar.getAttribute("src")}`
-    document.getElementById('editbody').value = `${postBody.innerText}`
-    let editname = document.getElementById('editname')
-    let edittitle = document.getElementById('edittitle')
-    let editavatar= document.getElementById('editavatar')
-    let editbody = document.getElementById('editbody')
-
-
-
-    document.getElementById("updatePostForm").addEventListener('submit', function (e) {
-        e.preventDefault()
-        if(
-            editname.value == ""||
-            edittitle.value == ""||
-            editavatar.value == ""||
-            editbody.value == ""
-        ){
-            alert("please fill the input fields")
-        }else{
-            fetch(`https://67097283af1a3998baa18931.mockapi.io/crudOperation/api/POST/POST/${id}`, {
-                method: 'PUT', 
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                name: `${editname.value}`,
-                title:`${edittitle.value}`,
-                avatar:`${editavatar.value}`,
-                body:`${editbody.value}`,
-                createdAt: new Date().toISOString()
-                })
-              })
-              .then(res => res.json())
-              .then(data => console.log(data))
-              .catch(error => console.log(error))
+    if(id == 1){
+        alert("you cannot edit this post")
+    }else{
+        createPostForm.style.display ="none"
+        editPostForm.style.display="block"
+        let editPost = e.target.closest(".post")
+        let postAvatar = editPost.querySelector(".postAvatar")
+        let postName = editPost.querySelector(".postName")
+        let postTitle = editPost.querySelector(".postTitle")
+        let postBody = editPost.querySelector(".postBody")
+        let postCreateAt = editPost.querySelector(".postCreateAt")
     
-              postAvatar.setAttribute(`src`,`${editavatar.value}`)
-              postName.innerText = `${editname.value}`
-              postTitle.innerText = `${edittitle.value}`
-              postBody.innerText = `${editbody.value}`
-              postCreateAt.innerText = `${new Date().toISOString()}`
-              editavatar.value = ""
-              editname.value = ""
-              edittitle.value = ""
-              editbody.value = ""
-        }
-    })
+        document.getElementById('editname').value = `${postName.innerText}`
+        document.getElementById('edittitle').value = `${postTitle.innerText}`
+        document.getElementById('editavatar').value = `${postAvatar.getAttribute("src")}`
+        document.getElementById('editbody').value = `${postBody.innerText}`
+        let editname = document.getElementById('editname')
+        let edittitle = document.getElementById('edittitle')
+        let editavatar= document.getElementById('editavatar')
+        let editbody = document.getElementById('editbody')
+    
+    
+    
+        document.getElementById("updatePostForm").addEventListener('submit', function (e) {
+            e.preventDefault()
+            if(
+                editname.value == ""||
+                edittitle.value == ""||
+                editavatar.value == ""||
+                editbody.value == ""
+            ){
+                // alert("please fill the input fields")
+            }else{
+                console.log(id)                
+                    fetch(`https://67097283af1a3998baa18931.mockapi.io/crudOperation/api/POST/POST/${id}`, {
+                        method: 'PUT', 
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                        name: `${editname.value}`,
+                        title:`${edittitle.value}`,
+                        avatar:`${editavatar.value}`,
+                        body:`${editbody.value}`,
+                        createdAt: new Date().toISOString()
+                        })
+                      })
+                      .then(res => res.json())
+                      .then(data => console.log(data))
+                      .catch(error => console.log(error))
+            
+                      postAvatar.setAttribute(`src`,`${editavatar.value}`)
+                      postName.innerText = `${editname.value}`
+                      postTitle.innerText = `${edittitle.value}`
+                      postBody.innerText = `${editbody.value}`
+                      postCreateAt.innerText = `${new Date().toISOString()}`
+                      editavatar.value = ""
+                      editname.value = ""
+                      edittitle.value = ""
+                      editbody.value = ""
+                      editPostForm.style.display="none"
+                      createPostForm.style.display ="block"
+            }
+        })
+    }
     // console.log(`
     //     ${id}
     //     this is Post Avatar : ${postAvatar.getAttribute("src")}
